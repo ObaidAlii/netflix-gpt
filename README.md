@@ -2,6 +2,7 @@
 
 - Create-react-app
 - Configured TailwindCss
+- Login Form
 
 # Features to build
 
