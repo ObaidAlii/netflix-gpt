@@ -16,8 +16,9 @@ export const checkFormData = (email, password, fullname, confirmPassword) => {
 
   if (!isEmailValid) return "Email ID is not valid";
   if (!isPasswordValid) return "Password is not valid";
-  if (!isNameValid) return "Entered Full Name is not valid";
-  if (!isConfirmPasswordValid) return "Entered Passwords doesn't match";
+  if (fullname && !isNameValid) return "Entered Full Name is not valid";
+  if (confirmPassword && !isConfirmPasswordValid)
+    return "Entered Passwords doesn't match";
 
   return null;
 };
